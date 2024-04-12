@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/t5-challenge/static/css/main.9d2b32df.css",
-    "main.js": "/t5-challenge/static/js/main.9e100230.js",
+    "main.css": "/t5-challenge/static/css/main.dfacb53a.css",
+    "main.js": "/t5-challenge/static/js/main.fb924e00.js",
     "static/js/453.84f3228b.chunk.js": "/t5-challenge/static/js/453.84f3228b.chunk.js",
     "static/media/marvel.svg": "/t5-challenge/static/media/marvel.be1f937a60f9541049ba55eeed066280.svg",
     "index.html": "/t5-challenge/index.html",
-    "main.9d2b32df.css.map": "/t5-challenge/static/css/main.9d2b32df.css.map",
-    "main.9e100230.js.map": "/t5-challenge/static/js/main.9e100230.js.map",
+    "main.dfacb53a.css.map": "/t5-challenge/static/css/main.dfacb53a.css.map",
+    "main.fb924e00.js.map": "/t5-challenge/static/js/main.fb924e00.js.map",
     "453.84f3228b.chunk.js.map": "/t5-challenge/static/js/453.84f3228b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d2b32df.css",
-    "static/js/main.9e100230.js"
+    "static/css/main.dfacb53a.css",
+    "static/js/main.fb924e00.js"
   ]
 }

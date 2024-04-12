@@ -20,4 +20,23 @@ export class ApiComicRepository extends BaseApiRepository implements ComicReposi
             return Comic.create({ id: data.id, title: data.name, thumbnail: data.thumbnail });
         });
     }
+    async getById(id: string): Promise<Comic> {
+        const options = {
+            method: 'GET',
+        };
+        const response = await this.execute<IAPIResponse<ApiResponse>>(
+            `${url}/characters/${id}?apikey=${apiKey}`,
+            options
+        );
+
+        console.log('response', response);
+        const character = response.data.results[0];
+
+        return Comic.create({
+            id: character.id,
+            title: character.name,
+            description: character.description,
+            thumbnail: character.thumbnail,
+        });
+    }
 }

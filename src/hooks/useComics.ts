@@ -10,6 +10,7 @@ const useComics = () => {
     const [comics, setComics] = useState<Comic[]>();
     const [limit, setLimit] = useState(15);
     const [loading, setLoading] = useState(false);
+    const [characterSelected, setCharacterSelected] = useState<Comic>();
 
     useEffect(() => {
         const loadComics = async () => {
@@ -30,7 +31,29 @@ const useComics = () => {
         setLimit(+value);
     };
 
-    return { comics, loading, onChange, limit };
+    const getCharacterByID = (id: string) => {
+        const fetchCharacterById = async () => {
+            try {
+                const character = await service.getById(id);
+                setCharacterSelected(character);
+            } catch (error) {
+                console.log('error');
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchCharacterById();
+    };
+
+    return {
+        comics,
+        loading,
+        onChange,
+        limit,
+        getCharacterByID,
+        characterSelected,
+        setCharacterSelected,
+    };
 };
 
 export default useComics;

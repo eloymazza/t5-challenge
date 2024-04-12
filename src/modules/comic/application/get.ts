@@ -11,4 +11,8 @@ export class CommicGetter {
     async get(limit: number): Promise<Comic[] | undefined> {
         return this.repository.get(limit);
     }
+
+    async getById(id: string): Promise<Comic | undefined> {
+        return this.repository.getById(id);
+    }
 }

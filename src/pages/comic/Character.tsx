@@ -1,6 +1,7 @@
 import React from 'react';
 import { Comic } from '../../modules/comic/domain/Comic';
 import styles from './Character.module.css';
+
 type Props = {
     character: Comic;
 };
@@ -10,11 +11,14 @@ const Character = ({ character }: Props) => {
 
     const title = character.titleValue();
     const thumbnail = character.thumbnailValue();
+    const description = character.descriptionValue();
     const thumbnailUrl = `${thumbnail.path}.${thumbnail.extension}`;
 
     const toggleAnimation = () => {
         setHoverEffect((prev) => !prev);
     };
+
+    console.log(description);
 
     return (
         <div
@@ -32,7 +36,8 @@ const Character = ({ character }: Props) => {
                 />
             </div>
             <div className={styles.descriptionContainer}>
-                <div className={styles.description}>{title.toUpperCase()}</div>
+                <div className={styles.title}>{title.toUpperCase()}</div>
+                <div className={styles.description}>{description.value}</div>
                 <div className={`${styles.separator} ${hoverEffect ? styles.expand : ''}`}></div>
             </div>
         </div>

@@ -1,0 +1,12 @@
+.limitSelectorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.limitSelectorContainer label {
+    margin-right: 10px;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
